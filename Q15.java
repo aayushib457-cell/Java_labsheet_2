@@ -1,0 +1,23 @@
+
+
+import java.util.Scanner;
+
+public class Q15 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        int count = 0;
+        int n = num;
+
+        while (n != 0) {
+            count += n & 1;
+            n >>>= 1;
+        }
+
+        System.out.println("Number of Set Bits = " + count);
+        sc.close();
+    }
+}
